@@ -1,0 +1,45 @@
+{
+  "name": "dreitier/awesome-documentation-blade-directives",
+  "description": "Make better developer documentations",
+  "keywords": [
+    "dreitier",
+    "awesome-documentation-blade-directives"
+  ],
+  "homepage": "https://dreitier.com/",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Christopher Klein",
+      "email": "me@schakko.de",
+      "homepage": "https://schakko.de"
+    }
+  ],
+  "require": {
+    "php": "^7.1.3|^8.0",
+    "laravel/framework": "^5.7|^6.0|^7.0|^8.0",
+    "scrivo/highlight.php": "v9.18.1.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "Dreitier\\Documentation\\Blade\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Dreitier\\Documentation\\Blade\\Test\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Dreitier\\Documentation\\Blade\\BladeDirectivesServiceProvider"
+      ]
+    }
+  }
+}
