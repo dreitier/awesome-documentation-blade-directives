@@ -2,15 +2,18 @@
   "name": "dreitier/awesome-documentation-blade-directives",
   "description": "Make better developer documentations",
   "keywords": [
-    "dreitier",
-    "awesome-documentation-blade-directives"
+    "awesome-documentation-blade-directives",
+    "markdown",
+    "highlight",
+    "highlightjs",
+    "dreitier"
   ],
   "homepage": "https://dreitier.com/",
   "license": "MIT",
   "authors": [
     {
       "name": "Christopher Klein",
-      "email": "me@schakko.de",
+      "email": "ckl@dreitier.com",
       "homepage": "https://schakko.de"
     }
   ],

@@ -29,8 +29,8 @@ Highlight a given source code file.
 - `$path` can be something like 'view:$path_in_laravel_views_folder' or a custom prefixed path
 - `$language` can be any supported language by highlight.js
 
-```@blade
-@highlight('view:documentation/samples/flow.,php' /* path */, 'php' /* language, optional */)
+```blade
+@highlight('view:documentation/samples/flow.php' /* path */, 'php' /* language, optional */)
 ```
 
 #### @beginHighlight / @endHighlight
