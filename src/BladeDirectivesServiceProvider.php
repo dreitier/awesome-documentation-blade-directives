@@ -3,6 +3,7 @@
 namespace Dreitier\Documentation\Blade;
 
 use Dreitier\Documentation\Blade\Content\Locator;
+use Dreitier\Documentation\Blade\Diff\Differ;
 use Dreitier\Documentation\Blade\Facades\StaticContentLocator;
 use Dreitier\Documentation\Blade\Highlight\Highlighter;
 use Illuminate\Support\Facades\App;
@@ -26,8 +27,6 @@ class BladeDirectivesServiceProvider extends ServiceProvider
      */
     public function registerDirectives()
     {
-        // $directives = require __DIR__ . '/directives.php';
-
         App::bind('staticContentLocator', function () {
             return new Locator();
         });
@@ -37,7 +36,15 @@ class BladeDirectivesServiceProvider extends ServiceProvider
             return $r;
         });
 
-        $directives = \Dreitier\Documentation\Blade\Facades\Highlighter::getBladeDirectives();
+        App::bind('differ', function () {
+            $r = new Differ();
+            return $r;
+        });
+
+        $directives = array_merge(
+            \Dreitier\Documentation\Blade\Facades\Highlighter::getBladeDirectives(),
+            \Dreitier\Documentation\Blade\Facades\Differ::getBladeDirectives(),
+        );
 
         // register highlighter directives
         foreach ($directives as $key => $callback) {
